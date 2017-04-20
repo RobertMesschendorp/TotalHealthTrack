@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--<script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>-->
-  <script src="app/assets/bower_components/angular/angular.js"></script>
+  <!--<script src="app/assets/bower_components/angular/angular.js"></script>-->
+  <script src="node_modules/angular/angular.js"></script>
   <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="node_modules/angular-css/angular-css.js"></script>
   <script src="node_modules/angular-aria/angular-aria.js"></script>
@@ -26,7 +27,8 @@
 </head>
 <body>
   <div id="wrapper">
-    <md-button class="md-raised">Henk</md-button>
+    <!--<md-button class="md-raised">Henk</md-button>-->
+    <tht-navigation></tht-navigation>
     <ui-view></ui-view>
   </div>
 
@@ -34,9 +36,13 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
+  <!-- Scripts -->
   <script src="app.js"></script>
   <script src="app/components/version/version.js"></script>
   <script src="app/components/version/version-directive.js"></script>
   <script src="app/components/version/interpolate-filter.js"></script>
+
+<!-- Directives -->
+  <script src="app/scripts/directives/thtNavigation/thtNavigation.js"></script>
 </body>
 </html>

@@ -1,0 +1,20 @@
+<md-toolbar class="md-menu-toolbar main-menu">
+    <md-menu-bar>
+        <md-menu ng-repeat="icon in icons track by $index">
+            <md-button class="md-fab md-primary md-raised {{icon.name}}" ng-click="$mdMenu.open()">
+                <md-icon class="material-icons">{{icons[$index].name}}</md-icon>
+            </md-button>
+            <md-menu-content>
+                <md-menu-item class="navigation-menu-category-title">
+                    {{icon.category_title}}
+                </md-menu-item>
+                <md-menu-divider></md-menu-divider>
+                <md-menu-item class="navigation-menu-item" ng-repeat="item in icons[$index].menuitems track by $index"
+                ng-click="navigateTo(item)">
+                    {{item}}
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+    </md-menu-bar>
+</md-toolbar>
+

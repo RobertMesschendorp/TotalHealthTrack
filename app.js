@@ -16,8 +16,43 @@ totalHealthTrackApp.config(['$locationProvider', '$stateProvider', '$urlRouterPr
     $stateProvider
         .state('home', {
             templateUrl: 'app/views/home.html',
-            url: '/'
-            // controller: 'HomeController'
+            url: '/',
+            controller: 'MainController'
+        })
+
+        .state('foodShuffle', {
+            templateUrl: 'app/views/food.html',
+            url: '/food'
+        })
+
+        .state('Categories', {
+            templateUrl: 'app/views/food.html',
+            url: '/categories'
+        })
+
+        .state('Personal Financial Management', {
+            templateUrl: 'app/views/finance.html',
+            url: '/personalfinancialmanagement'
+        })
+
+        .state('Stocks and shares', {
+            templateUrl: 'app/views/finance.html',
+            url: '/stocksandshares'
+        })
+
+        .state('Running', {
+            templateUrl: 'app/views/sports.html',
+            url: '/running'
+        })
+
+        .state('Fitness', {
+            templateUrl: 'app/views/sports.html',
+            url: '/fitness'
+        })
+
+        .state('moodweb', {
+            templateUrl: 'app/views/mental.html',
+            url: '/moodweb'
         });
 
     $urlRouterProvider.otherwise('something');
